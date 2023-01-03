@@ -2772,6 +2772,51 @@ h6 {
 /*----------------------------------------------------*/
 /* Gallery Area css
 ============================================================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+#card-row {
+  margin-left: 2px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  background-color: #FAF9F6;
+    height: 250px;
+}
+
 .isotope_fillter {
   margin-bottom: 50px; }
   .isotope_fillter .gallery_filter {
@@ -2797,14 +2842,17 @@ h6 {
 .h_gallery_item {
   display: inline-block;
   margin-bottom: 45px; 
-  border: solid black 1px;
-  height: 380px;}
+  height: 420px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  background-color: #FAF9F6;}
 
   .h_gallery_item .g_img_item {
     position: relative;
     text-align: center;
-    overflow: scroll;
+    overflow: hidden;
     border-radius: 5px; 
+    height: 200px;
   }
     .h_gallery_item .g_img_item:before {
       content: "";
@@ -2865,11 +2913,11 @@ h6 {
     .testimonials_area.testi_two .owl-item {
       padding: 20px 0px; }
     .testimonials_area.testi_two .testi_item {
-      background: #f9f9ff;
-      border-color: #f9f9ff;
+      background: #FAF9F6;
+      border-color: #FAF9F6;
       transition: all 300ms linear 0s; }
       .testimonials_area.testi_two .testi_item:hover {
-        background: #fff;
+        background: #FAF9F6;
         border-color: #fff;
         box-shadow: 0px 10px 30px 0px rgba(153, 153, 153, 0.1); }
 
@@ -2881,15 +2929,13 @@ h6 {
   color: #222222;
   font-size: 36px;
   font-family: "Roboto", sans-serif;
-  font-weight: bold;
   margin-bottom: 12px; }
 .test_title p {
   margin-bottom: 0px; }
 
 .testi_item {
-  border: 1px solid #eeeeee;
   border-radius: 10px;
-  background: #fff;
+  background: #FAF9F6;
   padding: 40px 28px; }
   .testi_item p {
     font-style: italic; }
