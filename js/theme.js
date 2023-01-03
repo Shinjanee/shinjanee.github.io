@@ -63,29 +63,22 @@
 	/*----------------------------------------------------*/
     /*  Testimonials Slider
     /*----------------------------------------------------*/
-    function testimonials_slider(){
-        if ( $('.testi_slider').length ){
-            $('.testi_slider').owlCarousel({
-                loop:true,
-                margin: 30,
-                items: 3,
-                nav: false,
-                autoplay: true,
-                smartSpeed: 1500,
-                dots:true, 
-                responsiveClass: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                    },
-                    768: {
-                        items: 3,
-                    },
-                }
-            })
+    $('.owl-carousel').owlCarousel({
+        margin: 10,
+        nav: true,
+        navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
         }
-    }
-    testimonials_slider();
+    });
 	
     
      
